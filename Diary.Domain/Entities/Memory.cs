@@ -1,7 +1,5 @@
 ﻿using Diary.Domain.Common;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Diary.Domain.Entities
 {
