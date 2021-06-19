@@ -15,6 +15,8 @@ namespace Diary.Persistence
 
             services.AddScoped(typeof(IAsyncRepository<>), typeof(BaseRepository<>));
 
+            services.AddScoped<IDiaryRepository, DiaryRepository>();
+
             return services;
         }
     }

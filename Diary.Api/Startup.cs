@@ -1,3 +1,5 @@
+using Diary.Application;
+using Diary.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -19,11 +21,18 @@ namespace Diary.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddApplicationServices();
+            services.AddPersistenceServices(Configuration);
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Diary.Api", Version = "v1" });
+            });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("Open", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             });
         }
 
@@ -40,6 +49,8 @@ namespace Diary.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors("Open");
 
             app.UseAuthorization();
 
