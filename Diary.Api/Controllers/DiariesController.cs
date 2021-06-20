@@ -20,11 +20,11 @@ namespace Diary.Api.Controllers
         }
 
         //[Authorize]
-        [HttpGet("users/{userId}", Name = "GetAllCategories")]
+        [HttpGet("", Name = "GetAllDiaries")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<List<DiaryListVm>>> GetDiariesByUser(Guid userId)
+        public async Task<ActionResult<List<DiaryListVm>>> GetDiaries()
         {
-            var dtos = await _mediator.Send(new GetDiaryListQuery() { UserId = userId });
+            var dtos = await _mediator.Send(new GetDiaryListQuery() { UserId = Guid.NewGuid() });
             return Ok(dtos);
         }
     }

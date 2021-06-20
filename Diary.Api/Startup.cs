@@ -1,4 +1,5 @@
 using Diary.Application;
+using Diary.Identity;
 using Diary.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -23,6 +24,7 @@ namespace Diary.Api
         {
             services.AddApplicationServices();
             services.AddPersistenceServices(Configuration);
+            services.AddIdentityServices(Configuration);
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
