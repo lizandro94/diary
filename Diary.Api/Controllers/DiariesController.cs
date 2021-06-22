@@ -1,5 +1,6 @@
 ﻿using Diary.Application.Features.Diaries.Queries.GetDiariesList;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Diary.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class DiariesController : ControllerBase
     {
@@ -19,7 +20,7 @@ namespace Diary.Api.Controllers
             _mediator = mediator;
         }
 
-        //[Authorize]
+        [Authorize]
         [HttpGet("", Name = "GetAllDiaries")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<List<DiaryListVm>>> GetDiaries()

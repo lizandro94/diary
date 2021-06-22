@@ -1,4 +1,6 @@
+using Diary.Api.Services;
 using Diary.Application;
+using Diary.Application.Contracts;
 using Diary.Identity;
 using Diary.Persistence;
 using Microsoft.AspNetCore.Builder;
@@ -26,7 +28,10 @@ namespace Diary.Api
             services.AddPersistenceServices(Configuration);
             services.AddIdentityServices(Configuration);
 
+            services.AddScoped<ILoggedInUserService, LoggedInUserService>();
+
             services.AddControllers();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Diary.Api", Version = "v1" });
@@ -51,6 +56,8 @@ namespace Diary.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseCors("Open");
 
