@@ -20,7 +20,7 @@ namespace Diary.Api.Controllers
             _mediator = mediator;
         }
 
-        //[Authorize]
+        [Authorize]
         [HttpGet("", Name = "GetAllDiaries")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<List<DiaryListVm>>> GetDiaries()
