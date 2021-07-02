@@ -21,7 +21,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{B5F4A8A5-CF6
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diary.Api", "Diary.Api\Diary.Api.csproj", "{237ED433-EA45-4B12-B017-141B9C3F1FF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diary.Identity", "Diary.Identity\Diary.Identity.csproj", "{F37F80B3-C61A-4322-BF8B-2D3748D0AB67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diary.Identity", "Diary.Identity\Diary.Identity.csproj", "{F37F80B3-C61A-4322-BF8B-2D3748D0AB67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{F5438FB2-F105-4F37-8229-43101513CAD4}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Diary.App", "Diary.App\", "{5D82996E-5A4D-47A6-B2AD-21B3E5EBF7E7}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_61021"
+		Debug.AspNetCompiler.PhysicalPath = "Diary.App\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61021\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_61021"
+		Release.AspNetCompiler.PhysicalPath = "Diary.App\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61021\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "61021"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +71,10 @@ Global
 		{F37F80B3-C61A-4322-BF8B-2D3748D0AB67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F37F80B3-C61A-4322-BF8B-2D3748D0AB67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F37F80B3-C61A-4322-BF8B-2D3748D0AB67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D82996E-5A4D-47A6-B2AD-21B3E5EBF7E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D82996E-5A4D-47A6-B2AD-21B3E5EBF7E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D82996E-5A4D-47A6-B2AD-21B3E5EBF7E7}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D82996E-5A4D-47A6-B2AD-21B3E5EBF7E7}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +88,8 @@ Global
 		{B5F4A8A5-CF64-4195-BE6C-D0F4555C400F} = {E5BD8C78-A7B8-4A18-9F84-F4605EB9F41A}
 		{237ED433-EA45-4B12-B017-141B9C3F1FF1} = {B5F4A8A5-CF64-4195-BE6C-D0F4555C400F}
 		{F37F80B3-C61A-4322-BF8B-2D3748D0AB67} = {DA0E5D81-7CA1-4E43-A082-EBD625B8E12A}
+		{F5438FB2-F105-4F37-8229-43101513CAD4} = {E5BD8C78-A7B8-4A18-9F84-F4605EB9F41A}
+		{5D82996E-5A4D-47A6-B2AD-21B3E5EBF7E7} = {F5438FB2-F105-4F37-8229-43101513CAD4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {10791950-BABE-4C6A-BC59-CC1D2D1BE809}
