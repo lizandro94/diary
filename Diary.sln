@@ -43,6 +43,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Diary.App", "Diary.App\", "
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "61021"
+		SlnRelativePath = "Diary.App\"
 	EndProjectSection
 EndProject
 Global
